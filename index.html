@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subodh - Software Developer</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /* Custom Styles */
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .font-mono {
+            font-family: 'Roboto Mono', monospace;
+        }
+        /* Dark Mode styles */
+        .dark body {
+            background-color: #0f172a; /* slate-900 */
+            color: #f8fafc; /* slate-50 */
+        }
+        .dark .bg-white {
+            background-color: #1e293b; /* slate-800 */
+        }
+        .dark .text-gray-800 {
+            color: #f8fafc; /* slate-50 */
+        }
+        .dark .text-gray-600 {
+            color: #cbd5e1; /* slate-300 */
+        }
+        .dark .border-gray-200 {
+            border-color: #334155; /* slate-700 */
+        }
+        .dark .shadow-lg {
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.25);
+        }
+        .dark .header-scrolled {
+            background-color: rgba(15, 23, 42, 0.85); /* slate-900 with opacity */
+        }
+        /* Smooth transition for dark mode */
+        * {
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        /* Custom animation for fade-in */
+        .fade-in {
+            animation: fadeIn 1s ease-in-out forwards;
+            opacity: 0;
+        }
+        .fade-in-delay-1 { animation-delay: 0.2s; }
+        .fade-in-delay-2 { animation-delay: 0.4s; }
+        .fade-in-delay-3 { animation-delay: 0.6s; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- =================================================== -->
+    <!-- ============== Header Section Start =============== -->
+    <!-- =================================================== -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-blue-600">Subodh</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#home" class="hover:text-blue-600">Home</a>
+                <a href="#about" class="hover:text-blue-600">About</a>
+                <a href="#skills" class="hover:text-blue-600">Skills</a>
+                <a href="#projects" class="hover:text-blue-600">Projects</a>
+                <a href="#testimonials" class="hover:text-blue-600">Testimonials</a>
+                <a href="#contact" class="hover:text-blue-600">Contact</a>
+            </div>
+            <div class="flex items-center">
+                 <button id="darkModeToggle" class="mr-4 text-xl">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button id="mobileMenuButton" class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-slate-800">
+             <a href="#home" class="block py-2 px-6 hover:bg-gray-100 dark:hover:bg-slate-700">Home</a>
+             <a href="#about" class="block py-2 px-6 hover:bg-gray-100 dark:hover:bg-slate-700">About</a>
+             <a href="#skills" class="block py-2 px-6 hover:bg-gray-100 dark:hover:bg-slate-700">Skills</a>
+             <a href="#projects" class="block py-2 px-6 hover:bg-gray-100 dark:hover:bg-slate-700">Projects</a>
+             <a href="#testimonials" class="block py-2 px-6 hover:bg-gray-100 dark:hover:bg-slate-700">Testimonials</a>
+             <a href="#contact" class="block py-2 px-6 hover:bg-gray-100 dark:hover:bg-slate-700">Contact</a>
+        </div>
+    </header>
+    <!-- ================================================= -->
+    <!-- ============== Header Section End =============== -->
+    <!-- ================================================= -->
+
+    <!-- ================================================ -->
+    <!-- ============== Home Section Start ============== -->
+    <!-- ================================================ -->
+    <section id="home" class="min-h-screen flex items-center bg-white dark:bg-slate-900">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4 fade-in">Hi, I'm Subodh</h1>
+            <p class="text-xl md:text-2xl text-gray-600 dark:text-slate-300 mb-8 fade-in fade-in-delay-1">A Passionate Software Developer Crafting Digital Experiences.</p>
+            <a href="#projects" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300 fade-in fade-in-delay-2">View My Work</a>
+        </div>
+    </section>
+    <!-- ============================================== -->
+    <!-- ============== Home Section End ============== -->
+    <!-- ============================================== -->
+
+    <!-- =================================================== -->
+    <!-- ============== About Me Section Start ============= -->
+    <!-- =================================================== -->
+    <section id="about" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-12">
+                <div class="md:w-1/3">
+                    <img src="https://placehold.co/400x400/3B82F6/FFFFFF?text=Subodh" alt="Subodh" class="rounded-full shadow-lg mx-auto">
+                </div>
+                <div class="md:w-1/2 text-center md:text-left">
+                    <h3 class="text-2xl font-bold mb-4">Crafting Code, Building Solutions</h3>
+                    <p class="text-gray-600 dark:text-slate-300 mb-4">
+                        Hello! I'm Subodh, a software developer with a knack for creating elegant and efficient solutions. With a foundation in computer science and years of hands-on experience, I specialize in full-stack development, bringing ideas to life from the server to the browser.
+                    </p>
+                    <p class="text-gray-600 dark:text-slate-300">
+                        My journey in tech is driven by a constant desire to learn and innovate. I'm passionate about clean code, user-centric design, and leveraging technology to solve real-world problems. When I'm not coding, you can find me exploring new technologies or contributing to open-source projects.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================================================= -->
+    <!-- ============== About Me Section End ============= -->
+    <!-- ================================================= -->
+
+    <!-- ================================================= -->
+    <!-- ============== Skills Section Start ============= -->
+    <!-- ================================================= -->
+    <section id="skills" class="py-20 bg-white dark:bg-slate-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">My Skills</h2>
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 text-center">
+                <div class="p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <i class="fab fa-html5 text-5xl text-blue-600 mb-4"></i>
+                    <h3 class="font-semibold">HTML5</h3>
+                </div>
+                <div class="p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <i class="fab fa-css3-alt text-5xl text-blue-600 mb-4"></i>
+                    <h3 class="font-semibold">CSS3</h3>
+                </div>
+                <div class="p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <i class="fab fa-js-square text-5xl text-blue-600 mb-4"></i>
+                    <h3 class="font-semibold">JavaScript</h3>
+                </div>
+                <div class="p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <i class="fab fa-react text-5xl text-blue-600 mb-4"></i>
+                    <h3 class="font-semibold">React</h3>
+                </div>
+                <div class="p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <i class="fab fa-node-js text-5xl text-blue-600 mb-4"></i>
+                    <h3 class="font-semibold">Node.js</h3>
+                </div>
+                <div class="p-6 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300">
+                    <i class="fas fa-database text-5xl text-blue-600 mb-4"></i>
+                    <h3 class="font-semibold">SQL/NoSQL</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- =============================================== -->
+    <!-- ============== Skills Section End ============= -->
+    <!-- =============================================== -->
+
+    <!-- ================================================== -->
+    <!-- ============== Projects Section Start ============ -->
+    <!-- ================================================== -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden cursor-pointer project-card" data-project="1">
+                    <img src="https://placehold.co/600x400/a3e635/1e293b?text=Project+One" alt="Project 1" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
+                        <p class="text-gray-600 dark:text-slate-300">A full-featured e-commerce site with React and Node.js.</p>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden cursor-pointer project-card" data-project="2">
+                    <img src="https://placehold.co/600x400/60a5fa/1e293b?text=Project+Two" alt="Project 2" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Task Management App</h3>
+                        <p class="text-gray-600 dark:text-slate-300">A productivity app to organize tasks and projects.</p>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="bg-white dark:bg-slate-800 rounded-lg shadow-lg overflow-hidden cursor-pointer project-card" data-project="3">
+                    <img src="https://placehold.co/600x400/facc15/1e293b?text=Project+Three" alt="Project 3" class="w-full h-56 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Portfolio Website</h3>
+                        <p class="text-gray-600 dark:text-slate-300">A personal portfolio built with modern web technologies.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ================================================ -->
+    <!-- ============== Projects Section End ============ -->
+    <!-- ================================================ -->
+    
+    <!-- ====================================================== -->
+    <!-- ============== Testimonials Section Start ============ -->
+    <!-- ====================================================== -->
+    <section id="testimonials" class="py-20 bg-white dark:bg-slate-800">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">What Others Say</h2>
+            <div class="flex flex-col md:flex-row gap-8">
+                <div class="bg-gray-50 dark:bg-slate-700 p-8 rounded-lg shadow-md flex-1">
+                    <p class="text-gray-600 dark:text-slate-300 mb-6">"Subodh is a highly skilled developer who consistently delivers quality work. His attention to detail and problem-solving abilities are top-notch."</p>
+                    <div class="flex items-center">
+                        <img src="https://placehold.co/50x50/3B82F6/FFFFFF?text=JD" class="w-12 h-12 rounded-full mr-4" alt="Jane Doe">
+                        <div>
+                            <p class="font-bold">Jane Doe</p>
+                            <p class="text-sm text-gray-500 dark:text-slate-400">Project Manager, TechCorp</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-50 dark:bg-slate-700 p-8 rounded-lg shadow-md flex-1">
+                    <p class="text-gray-600 dark:text-slate-300 mb-6">"Working with Subodh was a pleasure. He's a great communicator and a team player who always goes the extra mile to ensure project success."</p>
+                     <div class="flex items-center">
+                        <img src="https://placehold.co/50x50/10B981/FFFFFF?text=JS" class="w-12 h-12 rounded-full mr-4" alt="John Smith">
+                        <div>
+                            <p class="font-bold">John Smith</p>
+                            <p class="text-sm text-gray-500 dark:text-slate-400">Lead Engineer, Innovate LLC</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ==================================================== -->
+    <!-- ============== Testimonials Section End ============ -->
+    <!-- ==================================================== -->
+
+    <!-- ================================================== -->
+    <!-- ============== Contact Section Start ============= -->
+    <!-- ================================================== -->
+    <section id="contact" class="py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+            <div class="max-w-3xl mx-auto">
+                <form action="#" method="POST" class="bg-white dark:bg-slate-800 p-8 rounded-lg shadow-lg">
+                    <div class="mb-6">
+                        <label for="name" class="block mb-2 font-bold">Name</label>
+                        <input type="text" id="name" name="name" class="w-full p-3 rounded bg-gray-100 dark:bg-slate-700 border border-transparent focus:border-blue-500 outline-none" required>
+                    </div>
+                     <div class="mb-6">
+                        <label for="email" class="block mb-2 font-bold">Email</label>
+                        <input type="email" id="email" name="email" class="w-full p-3 rounded bg-gray-100 dark:bg-slate-700 border border-transparent focus:border-blue-500 outline-none" required>
+                    </div>
+                     <div class="mb-6">
+                        <label for="message" class="block mb-2 font-bold">Message</label>
+                        <textarea id="message" name="message" rows="5" class="w-full p-3 rounded bg-gray-100 dark:bg-slate-700 border border-transparent focus:border-blue-500 outline-none" required></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-full hover:bg-blue-700 transition duration-300">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- ================================================ -->
+    <!-- ============== Contact Section End ============= -->
+    <!-- ================================================ -->
+
+    <!-- ================================================= -->
+    <!-- ============== Footer Section Start ============= -->
+    <!-- ================================================= -->
+    <footer class="bg-gray-100 dark:bg-slate-900 py-8">
+        <div class="container mx-auto px-6 text-center">
+             <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="text-xl hover:text-blue-600"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-xl hover:text-blue-600"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-xl hover:text-blue-600"><i class="fab fa-twitter"></i></a>
+            </div>
+            <p class="text-gray-600 dark:text-slate-400">&copy; 2024 Subodh. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- =============================================== -->
+    <!-- ============== Footer Section End ============= -->
+    <!-- =============================================== -->
+
+    <!-- ==================================================== -->
+    <!-- ============== Project Modal Start ================= -->
+    <!-- ==================================================== -->
+    <div id="projectModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-white dark:bg-slate-800 rounded-lg shadow-2xl max-w-2xl w-full overflow-hidden relative">
+             <button id="closeModal" class="absolute top-4 right-4 text-2xl hover:text-blue-600">&times;</button>
+            <div id="modalContent">
+                <!-- Project details will be injected here by JavaScript -->
+            </div>
+        </div>
+    </div>
+    <!-- ================================================== -->
+    <!-- ============== Project Modal End ================= -->
+    <!-- ================================================== -->
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Header scroll effect
+            const header = document.getElementById('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 50) {
+                    header.classList.add('bg-white', 'dark:bg-slate-900/80', 'shadow-md', 'backdrop-blur-sm');
+                } else {
+                    header.classList.remove('bg-white', 'dark:bg-slate-900/80', 'shadow-md', 'backdrop-blur-sm');
+                }
+            });
+
+            // Dark Mode Toggle
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const htmlElement = document.documentElement;
+            const moonIcon = '<i class="fas fa-moon"></i>';
+            const sunIcon = '<i class="fas fa-sun"></i>';
+            
+            // Check for saved theme in localStorage
+            if (localStorage.getItem('theme') === 'dark') {
+                htmlElement.classList.add('dark');
+                darkModeToggle.innerHTML = sunIcon;
+            } else {
+                darkModeToggle.innerHTML = moonIcon;
+            }
+
+            darkModeToggle.addEventListener('click', () => {
+                htmlElement.classList.toggle('dark');
+                if (htmlElement.classList.contains('dark')) {
+                    localStorage.setItem('theme', 'dark');
+                    darkModeToggle.innerHTML = sunIcon;
+                } else {
+                    localStorage.setItem('theme', 'light');
+                    darkModeToggle.innerHTML = moonIcon;
+                }
+            });
+
+            // Mobile Menu
+            const mobileMenuButton = document.getElementById('mobileMenuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileMenu.addEventListener('click', (e) => {
+                if(e.target.tagName === 'A') {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+
+
+            // Project Modal
+            const projectCards = document.querySelectorAll('.project-card');
+            const projectModal = document.getElementById('projectModal');
+            const closeModal = document.getElementById('closeModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            const projectDetails = {
+                '1': {
+                    title: 'E-commerce Platform',
+                    image: 'https://placehold.co/800x500/a3e635/1e293b?text=E-commerce',
+                    description: 'A comprehensive e-commerce platform built with the MERN stack (MongoDB, Express, React, Node.js). Features include product catalog, shopping cart, user authentication, and an admin dashboard for managing products and orders.',
+                    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Tailwind CSS'],
+                    liveLink: '#',
+                    repoLink: '#'
+                },
+                '2': {
+                    title: 'Task Management App',
+                    image: 'https://placehold.co/800x500/60a5fa/1e293b?text=Task+App',
+                    description: 'A sleek and intuitive task management application designed to help users organize their daily tasks and boost productivity. It features drag-and-drop functionality, project boards, and due date reminders.',
+                    tech: ['Vue.js', 'Firebase', 'Vuetify'],
+                    liveLink: '#',
+                    repoLink: '#'
+                },
+                '3': {
+                    title: 'Personal Portfolio',
+                    image: 'https://placehold.co/800x500/facc15/1e293b?text=Portfolio',
+                    description: 'The very portfolio you are looking at. Designed to be a clean, modern, and responsive showcase of my skills and projects. Built from scratch with HTML, Tailwind CSS, and vanilla JavaScript.',
+                    tech: ['HTML5', 'Tailwind CSS', 'JavaScript'],
+                    liveLink: '#',
+                    repoLink: '#'
+                }
+            };
+            
+            projectCards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const projectId = card.dataset.project;
+                    const project = projectDetails[projectId];
+                    
+                    modalContent.innerHTML = `
+                        <img src="${project.image}" alt="${project.title}" class="w-full h-64 object-cover">
+                        <div class="p-8">
+                             <h3 class="text-2xl font-bold mb-4">${project.title}</h3>
+                             <div class="flex flex-wrap gap-2 mb-4">
+                                ${project.tech.map(t => `<span class="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded">${t}</span>`).join('')}
+                             </div>
+                             <p class="text-gray-600 dark:text-slate-300 mb-6">${project.description}</p>
+                             <div class="flex gap-4">
+                                 <a href="${project.liveLink}" target="_blank" class="bg-blue-600 text-white font-bold py-2 px-6 rounded-full hover:bg-blue-700 transition duration-300">Live Demo</a>
+                                 <a href="${project.repoLink}" target="_blank" class="bg-gray-200 dark:bg-slate-700 text-gray-800 dark:text-slate-200 font-bold py-2 px-6 rounded-full hover:bg-gray-300 dark:hover:bg-slate-600 transition duration-300">GitHub</a>
+                             </div>
+                        </div>
+                    `;
+                    projectModal.classList.remove('hidden');
+                });
+            });
+
+            closeModal.addEventListener('click', () => {
+                projectModal.classList.add('hidden');
+            });
+            
+            projectModal.addEventListener('click', (e) => {
+                if (e.target === projectModal) {
+                     projectModal.classList.add('hidden');
+                }
+            });
+
+            // Animate on scroll
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            document.querySelectorAll('section > div').forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+    </script>
+</body>
+</html>
